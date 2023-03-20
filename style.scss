@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    padding-top: 200px;
+}
+.slider-wrapper{
+    // width: 100%;
+    width:fit-content;
+    display: flex;
+    overflow: hidden;
+    flex-flow: row nowrap;    
+    will-change: transform;
+    background-color: #231F20;
+    align-items: center;
+    height: 280px;
+    padding:0 10px;
+    div{
+        width: var(--div_width);
+        img{
+            width: 65%;
+            display: block;
+            margin: auto;
+
+        }
+    }
+}
