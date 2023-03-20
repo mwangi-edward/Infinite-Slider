@@ -4,10 +4,10 @@
 }
 body{
     overflow: hidden;
-    padding-top: 200px;
+    padding: 150px 0px;
+    min-height: 100vh;
 }
 .slider-wrapper{
-    // width: 100%;
     width:fit-content;
     display: flex;
     overflow: hidden;
@@ -15,8 +15,8 @@ body{
     will-change: transform;
     background-color: #231F20;
     align-items: center;
-    height: 280px;
-    padding:0 10px;
+    padding:120px 10px;
+    color:white;
     div{
         width: var(--div_width);
         img{

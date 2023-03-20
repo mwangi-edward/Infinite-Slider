@@ -9,8 +9,7 @@ class InfiniteSlider{
         this.sliderWrap.style.setProperty(div_width, this.picWidth+"px");
         this.allSlides = [...document.querySelectorAll(slidename)];
     }
-    setUp(){
-        
+    setUp(){        
         this.allSlides.forEach((item)=>{
             let clone = item.cloneNode(true);
             clone.classList.add('clone');
@@ -26,7 +25,7 @@ class InfiniteSlider{
         this.setUp();
         setInterval(()=>{
             this.space = this.allSlides[0].offsetWidth + this.space;        
-            if (this.space <= this.picWidth * 4){
+            if (this.space <= this.picWidth * this.allSlides.length){
                 this.sliderWrap.style.transition = "all 1.8s";
                 this.sliderWrap.style.transform =  `translateX(${-this.space}px)`;
             }
@@ -35,14 +34,11 @@ class InfiniteSlider{
                 this.sliderWrap.style.transform =  `translateX(${0}px)`;
                 this.space = 0;
             }
-            
-            // 
         },2000);
-        
-
     }
-
-
+    loop(){
+        console.log('');
+    }
 }
 
 let slider = new InfiniteSlider(4,".slider-wrapper","--div_width",".slide"); 
